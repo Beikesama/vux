@@ -220,9 +220,11 @@ export default {
       this.$emit('on-close')
       if (!delay) {
         this.isOpen = false
+        this.$emit('on-close-finish')
       } else {
         setTimeout(() => {
           this.isOpen = false
+          this.$emit('on-close-finish')
         }, delay)
       }
       this.distX = 0
